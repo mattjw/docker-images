@@ -2,8 +2,12 @@ FROM circleci/python:3.6.8
 # Base image source for reference:
 # https://github.com/CircleCI-Public/circleci-dockerfiles/tree/master/python/images
 
-RUN sudo apt-get update && \
-  sudo apt-get install openjdk-8-jre && \
-  sudo pip install poetry~=1.0.0
+RUN sudo pip install poetry~=1.0.0 && \
+  sudo apt-get update && \
+  sudo apt-get install openjdk-8-jre
 
-# FROM circleci/openjdk:8u232-jdk  # fixme
+ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/"
+# JAVA_HOME can be located via:
+#   readlink -f /usr/bin/java | sed "s:bin/java::" 
+# Automating this in the Docker image build is sadly not yet straightforward:
+# https://github.com/moby/moby/issues/29110
