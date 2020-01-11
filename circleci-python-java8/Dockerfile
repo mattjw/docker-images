@@ -2,7 +2,7 @@ FROM circleci/python:3.6.8
 # Base image source for reference:
 # https://github.com/CircleCI-Public/circleci-dockerfiles/tree/master/python/images
 
-RUN sudo pip install poetry~=1.0.0 && \
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/1.0.2/get-poetry.py | python && \
   sudo apt-get update && \
   sudo apt-get install openjdk-8-jre
 
