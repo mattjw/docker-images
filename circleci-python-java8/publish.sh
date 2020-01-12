@@ -25,7 +25,7 @@ docker build -t "${IMAGE_PATH}" .
 #
 # Re-tag
 
-echo -e "\nRe-tagging for Github Packages\n"
+echo -e "\nGenerating image tag with hash\n"
 
 TRUNCATED_HASH=$( \
     docker inspect --format='{{.Id}}' ${IMAGE_PATH} | \
@@ -39,7 +39,7 @@ fi
 
 HASHED_IMAGE_PATH=${IMAGE_PATH}-${TRUNCATED_HASH}
 
-echo -e "Image for Github Packages: ${HASHED_IMAGE_PATH}"
+echo -e "Image with hash: ${HASHED_IMAGE_PATH}"
 docker tag ${IMAGE_PATH} ${HASHED_IMAGE_PATH}
 
 #
