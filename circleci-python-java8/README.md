@@ -15,8 +15,14 @@ This image is:
 - Execute the publish script with the env var set:
   ```bash
   export GITHUB_TOKEN=xyz
-  bash publish.sh
+  bash publish-to-github.sh
   ```
 
 See [Authenticating to GitHub Packages](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages)
 for more information.
+
+## Publish to Docker Hub
+
+Docker Hub repository: `https://hub.docker.com/r/mattjwnet/circleci-python-java8`
+
+Build and publish automated via Github Actions.
