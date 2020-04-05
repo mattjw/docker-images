@@ -8,7 +8,7 @@ on: push
 #      - master
 
 jobs:
-  build:
+  circleci_python_java8:
     runs-on: ubuntu-latest
     steps:
     - name: Code checkout
@@ -18,11 +18,12 @@ jobs:
         # https://github.com/marketplace/actions/publish-docker
       with:
         name: mattjwnet/circleci-python-java8
+        workdir: circleci-python-java8
+        tags: py3.6.8
+        registry: registry.hub.docker.com
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         # For handling secrets in Github Actions, see
         # https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets
         # Use dockerhub Access Tokens rather than passwords:
         # https://hub.docker.com/settings/security
-        registry: registry.hub.docker.com
-        tags: py3.6.8
