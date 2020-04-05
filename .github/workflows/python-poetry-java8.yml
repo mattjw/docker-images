@@ -1,22 +1,24 @@
-name: Publish Docker images
+name: "Publish docker image: python-poetry-java8"
 
 on:
   push:
     branches:
      - master
+    paths:
+    - python-poetry-java8/**
 
 jobs:
-  circleci_python_java8:
+  python-poetry-java8:
     runs-on: ubuntu-latest
     steps:
     - name: Code checkout
       uses: actions/checkout@master
-    - name: Publish circleci-python-java8 to docker hub
+    - name: Publish python-poetry-java8 to docker hub
       uses: elgohr/Publish-Docker-Github-Action@master
         # https://github.com/marketplace/actions/publish-docker
       with:
-        name: mattjwnet/circleci-python-java8
-        workdir: circleci-python-java8
+        name: mattjwnet/python-poetry-java8
+        workdir: python-poetry-java8
         tags: py3.6.8
         registry: registry.hub.docker.com
         username: ${{ secrets.DOCKER_USERNAME }}
