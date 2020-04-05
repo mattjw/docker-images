@@ -26,10 +26,3 @@ ENV COLUMNS=100
 # Automating this in the Docker image build is sadly not yet straightforward:
 # https://github.com/moby/moby/issues/29110
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/"
-
-# Allow this image to also be used in Github Actions
-# See: https://github.community/t5/GitHub-Actions/EACCES-permission-denied-How-to-solve/td-p/34488
-RUN \
-  sudo mkdir /github && \
-  sudo chown circleci /github && \
-  sudo chmod 777 /github
