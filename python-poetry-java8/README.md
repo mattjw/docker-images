@@ -1,4 +1,4 @@
-# Docker image with Python and Java 8 support for CircleCI pipelines
+# Docker image with Python, poetry, and Java 8 support
 
 This image is:
 

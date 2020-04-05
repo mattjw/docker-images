@@ -29,7 +29,7 @@ RUN \
   rm -r /home/build-git && \
   cd / && \
   echo "\nInstalling poetry\n" && \
-  pip install poetry==1.0.2 && \
+  pip install poetry==1.0.5 && \
   echo "\nInstalling Java\n" && \
   apt-get install -y openjdk-8-jre
 
