@@ -27,4 +27,4 @@ RUN \
 # https://github.com/moby/moby/issues/29110
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/"
 
-# CMD ["/bin/bash"]
+WORKDIR /home
