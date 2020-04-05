@@ -1,29 +1,24 @@
-name: Publish Docker images
+name: "Publish docker image: circleci-python-java8"
 
 on:
   push:
-    branches:
-     - master
+    # branches:
+    #  - master
+    paths:
+    - circleci-python-java8/**
 
 jobs:
-
-  build_all:
-    
+  circleci-python-java8:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        image_dir: [circleci-python-java8]
-        # assumption: `image_dir` must exactly match Docker Hub repo name and subdir name in this repo
-
     steps:
     - name: Code checkout
       uses: actions/checkout@master
-    - name: Publish ${{ matrix.image_dir }} to docker hub
+    - name: Publish circleci-python-java8 to docker hub
       uses: elgohr/Publish-Docker-Github-Action@master
         # https://github.com/marketplace/actions/publish-docker
       with:
-        name: mattjwnet/${{ matrix.image_dir }}
-        workdir: ${{ matrix.image_dir }}
+        name: mattjwnet/circleci-python-java8
+        workdir: circleci-python-java8
         tags: py3.6.8
         registry: registry.hub.docker.com
         username: ${{ secrets.DOCKER_USERNAME }}
