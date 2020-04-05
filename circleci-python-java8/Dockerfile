@@ -30,6 +30,6 @@ ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre/"
 # Allow this image to also be used in Github Actions
 # See: https://github.community/t5/GitHub-Actions/EACCES-permission-denied-How-to-solve/td-p/34488
 RUN \
-  mkdir /github && \
+  sudo mkdir /github && \
   sudo chown circleci /github && \
   sudo chmod 777 /github
