@@ -1,0 +1,29 @@
+name: "Publish docker image: python-poetry-java8"
+
+on:
+  push:
+    # branches:
+    #  - master
+    paths:
+    - python-poetry-java8/**
+
+jobs:
+  python-poetry-java8:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Code checkout
+      uses: actions/checkout@master
+    - name: Publish python-poetry-java8 to docker hub
+      uses: elgohr/Publish-Docker-Github-Action@master
+        # https://github.com/marketplace/actions/publish-docker
+      with:
+        name: mattjwnet/python-poetry-java8
+        workdir: python-poetry-java8
+        tags: py3.6.8
+        registry: registry.hub.docker.com
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        # For handling secrets in Github Actions, see
+        # https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets
+        # Use dockerhub Access Tokens rather than passwords:
+        # https://hub.docker.com/settings/security

@@ -1,8 +1,8 @@
-FROM python:3.6.8
+FROM python:3.6.8-stretch
 # Base image source for reference:
 # https://hub.docker.com/_/python
-
-# Also based on CircleCI's image
+#
+# CircleCI's image is also a useful reference:
 # https://github.com/CircleCI-Public/circleci-dockerfiles/blob/master/python/images/3.6.8/Dockerfile
 
 RUN \
