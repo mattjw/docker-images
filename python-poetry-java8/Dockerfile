@@ -7,7 +7,9 @@ FROM python:3.6.8-stretch
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# To use this image in a Github Actions container,
+# To use this image in a Github Actions container, git must be at version 2.18
+# or greater. Otherwise, the checkout action will not copy the `.git` metadata
+# directory. See: https://github.com/actions/checkout/issues/126
 
 RUN \
   apt-get update && \
