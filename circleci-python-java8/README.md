@@ -25,4 +25,4 @@ for more information.
 
 Docker Hub repository: `https://hub.docker.com/r/mattjwnet/circleci-python-java8`
 
-Build and publish automated via Github Actions.
+Build and publish are automated via Github Actions. See `.github/workflows` at the root of this repo.
