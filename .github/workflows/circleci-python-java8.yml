@@ -2,8 +2,8 @@ name: "Publish docker image: circleci-python-java8"
 
 on:
   push:
-    # branches:
-    #  - master
+    branches:
+     - master
     paths:
     - circleci-python-java8/**
 

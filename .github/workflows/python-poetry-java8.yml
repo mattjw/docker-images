@@ -2,8 +2,8 @@ name: "Publish docker image: python-poetry-java8"
 
 on:
   push:
-    # branches:
-    #  - master
+    branches:
+     - master
     paths:
     - python-poetry-java8/**
 
