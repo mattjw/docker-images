@@ -11,8 +11,8 @@ set -u
 GITHUB_USERNAME="mattjw"
 GITHUB_REPO="docker-images"
 
-IMAGE_NAME="circleci-python-java8"
-IMAGE_TAG="py3.6.8"
+IMAGE_NAME="circleci-python-java11"
+IMAGE_TAG="py3.10.1"
 
 #
 # Build

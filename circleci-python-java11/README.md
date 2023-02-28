@@ -1,11 +1,11 @@
-# Docker image with Python and Java 8 support for CircleCI pipelines
+# Docker image with Python and Java 11 support for CircleCI pipelines
 
 This image is:
 
 - intended for use in CircleCI pipelines
 - to build Python projects
 - using the Poetry packager
-- with access to a Java 8 (1.8) runtime environment
+- with access to a Java 11 runtime environment
 
 ## Publish to Docker Hub
 
