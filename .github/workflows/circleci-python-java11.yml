@@ -1,4 +1,4 @@
-name: "Publish docker image: circleci-python-java8"
+name: "Publish docker image: circleci-python-java11"
 
 on:
   push:
