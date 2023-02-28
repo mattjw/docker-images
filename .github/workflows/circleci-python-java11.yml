@@ -5,21 +5,21 @@ on:
     branches:
      - master
     paths:
-    - circleci-python-java8/**
+    - circleci-python-java11/**
 
 jobs:
-  circleci-python-java8:
+  circleci-python-java11:
     runs-on: ubuntu-latest
     steps:
     - name: Code checkout
       uses: actions/checkout@master
-    - name: Publish circleci-python-java8 to docker hub
+    - name: Publish circleci-python-java11 to docker hub
       uses: elgohr/Publish-Docker-Github-Action@master
         # https://github.com/marketplace/actions/publish-docker
       with:
-        name: mattjwnet/circleci-python-java8
-        workdir: circleci-python-java8
-        tags: py3.6.8
+        name: mattjwnet/circleci-python-java11
+        workdir: circleci-python-java11
+        tags: py3.10.1
         registry: registry.hub.docker.com
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
