@@ -15,8 +15,10 @@ Build and publish are automated via Github Actions. See `.github/workflows` at t
 
 ## Publish to Github Packages
 
-**DEPRECATED:** Until Github Packages supports login-less image pulls for public images, this method
+> ❌ **DEPRECATED:** Until Github Packages supports login-less image pulls for public images, this method
 is deprecated. Instead, use images as published to Docker Hub.
+
+Github repository: [`https://ghcr.io/mattjw/docker-images/circleci-python-java11`](https://github.com/users/mattjw/packages/container/package/docker-images%2Fcircleci-python-java11)
 
 - Create/retrieve a Github personal access token
   [via the Github website](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token). At a minimum,
