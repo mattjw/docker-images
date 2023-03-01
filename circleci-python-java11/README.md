@@ -9,7 +9,7 @@ This image is:
 
 ## Publish to Docker Hub
 
-Docker Hub repository: [`mattjwnet/circleci-python-java8`](https://hub.docker.com/r/mattjwnet/circleci-python-java8/tags)
+Docker Hub repository: [`mattjwnet/circleci-python-java11`](https://hub.docker.com/r/mattjwnet/circleci-python-java11/tags)
 
 Build and publish are automated via Github Actions. See `.github/workflows` at the root of this repo.
 
