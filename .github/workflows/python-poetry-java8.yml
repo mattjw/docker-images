@@ -14,7 +14,7 @@ jobs:
     - name: Code checkout
       uses: actions/checkout@master
     - name: Publish python-poetry-java8 to docker hub
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
         # https://github.com/marketplace/actions/publish-docker
       with:
         name: mattjwnet/python-poetry-java8
